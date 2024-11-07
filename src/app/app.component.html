@@ -1,0 +1,45 @@
+<header>
+  <nav>
+    <div class="staticBar">
+      <div class="logo">
+        <div class="logo-main">KLiK</div>
+        <div class="logo-footer">by &copy;CODE-BULTER</div>
+      </div>
+      <div class="horizontalMenu">
+        <a routerLink="/about"><button class="about" [disabled]="match('about')">About</button></a>
+        <a routerLink="/design"><button class="design" [disabled]="match('design')">Design</button></a>
+        <a routerLink="/klik"><button class="klikApp" [disabled]="match('klik')">KLiK</button></a>
+        <a routerLink="/usage"><button class="usage" [disabled]="match('usage')">Usage</button></a>
+      </div>
+      <div class="hamburger" (click)="onClickHamburger()">
+        @if (showHamburgerMenu) {
+          <div class="burger cross1"></div>
+          <div class="burger cross2"></div>
+          <div class="burger cross3"></div>
+
+        }
+        @else {
+          <div class="burger"></div>
+          <div class="burger"></div>
+          <div class="burger"></div>
+        }
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  @if (showHamburgerMenu) {
+    <div class="hamburgerMenuHider">
+      <a routerLink="/about"><button class="aboutMobile" [disabled]="match('about')">About</button></a>
+      <a routerLink="/design"><button class="designMobile" [disabled]="match('design')">Design</button></a>
+      <a routerLink="/klik"><button class="klikAppMobile" [disabled]="match('klik')">KLiK</button></a>
+      <a routerLink="/usage"><button class="usageMobile" [disabled]="match('usage')">Usage</button></a>
+    </div>
+    <div class="pageWithMenu">
+      <router-outlet></router-outlet>
+    </div>
+  }
+  @else {
+    <router-outlet></router-outlet>
+  }
+</main>

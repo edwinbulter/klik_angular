@@ -1,0 +1,19 @@
+<h1>Hello {{ getPrettyUserName() }}!</h1>
+
+<button class="klikButton" (click)="incrementCounter()">
+  KLiK
+</button>
+
+<table class="kliksTable">
+  <tbody>
+  <tr>
+    <td class="userCountLabel">Your KLiK count</td>
+    <td class="userCount">{{ userCount }}</td>
+  </tr>
+  <tr>
+    <td class="totalCountLabel">Total KLiK count</td>
+    <td class="totalCount">{{ totalCount }}</td>
+  </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,26 @@
+@if (loading) {
+  <div>Loading...</div>
+}
+@if (error) {
+  <div>{{ error }}</div>
+}
+@if (counters.length && !loading && !error) {
+  <table>
+    <thead>
+    <tr>
+      <th>User</th>
+      <th>Clicks</th>
+      <th>Last Click</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for(counter of counters; track counter.USER_ID) {
+        <tr>
+          <td>{{ counter.USER_ID }}</td>
+          <td>{{ counter.CLICK_COUNT }}</td>
+          <td>{{ counter.UPDATED_AT }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

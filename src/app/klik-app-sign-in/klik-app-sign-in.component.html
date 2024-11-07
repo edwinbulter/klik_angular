@@ -1,0 +1,12 @@
+<amplify-authenticator>
+  <ng-template
+    amplifySlot="authenticated"
+    let-user="user"
+    let-signOut="signOut"
+  >
+    <app-klik-app [username]="user.username"/>
+
+    <button class="signoutButton" (click)="signOut()">Sign Out</button>
+  </ng-template>
+</amplify-authenticator>
+

@@ -1,0 +1,56 @@
+.klikButton {
+  position: absolute;
+  top: 200px;
+  width: 300px;
+  height: 40px;
+}
+
+.kliksTable {
+  position: absolute;
+  width: 250px;
+  top: 250px;
+}
+
+table tr {
+  height: 40px;
+}
+
+table td {
+  text-align: center;
+}
+
+.userCountLabel {
+  background-color: green;
+  color: white;
+}
+
+.userCount {
+  background-color: lightgray;
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  width: 70px;
+}
+
+.totalCountLabel {
+  background-color: saddlebrown;
+  color: white;
+}
+
+.totalCount {
+  background-color: lightgray;
+  color: saddlebrown;
+  font-weight: bold;
+  font-size: 20px;
+  width: 70px;
+  text-align: center;
+}
+
+.signoutButton {
+  position: absolute;
+  top: 400px;
+  width: 300px;
+  height: 40px;
+
+}
